@@ -1,27 +1,21 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
-        int mat,fizik,kimya,turkce,tarih;
+        double r,a;
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Matematik Notunuz : ");
-        mat = input.nextInt();
+        System.out.print("Daire Yaricapini Giriniz : ");
+        r = input.nextDouble();
+        System.out.print("Merkez Acisini Giriniz: ");
+        a = input.nextInt();
 
-        System.out.print("Fizik Notunuz : ");
-        fizik = input.nextInt();
+        double cevre = 2*3.14*r;
+        double alan = 3.14*r*r;
+        double alanDilim = (3.14*r*r*a)/360;
+        System.out.println( "Daire Cevresi: " +cevre);
+        System.out.println( "Daire Alani: " +alan);
+        System.out.println( "Daire Diliminin Alani: " +alanDilim);
 
-        System.out.print("Kimya Notunuz : ");
-        kimya = input.nextInt();
 
-        System.out.print("Tarih Notunuz : ");
-        tarih = input.nextInt();
-
-        System.out.print("Turkce Notunuz : ");
-        turkce = input.nextInt();
-
-        double ort = (mat+fizik+kimya+tarih+turkce)/5;
-        System.out.println("Ortalamaniz:"+ort);
-
-        System.out.print( ort>60 ? "Sinifi Gecti": "Sinifta Kaldi");
     }
 }
